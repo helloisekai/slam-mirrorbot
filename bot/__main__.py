@@ -56,7 +56,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
         sendMarkup(
-            'Oops! This bot only work on gawr mirror group. Join the group to use this bot.',
+            'Oops! This bot only works in gawr mirror group. Join the group to use this bot.',
             context.bot,
             update,
             reply_markup,
