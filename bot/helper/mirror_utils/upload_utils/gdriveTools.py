@@ -612,7 +612,7 @@ class GoogleDriveHelper:
             Telegraph(access_token=telegraph_token).edit_page(path = self.path[prev_page],
                                  title = 'Gawr Mirror Search',
                                  author_name='Gawr Mirror',
-                                 author_url='https://gawr.floral.workers.dev',
+                                 author_url='https://t.me/gawrmirror',
                                  html_content=content)
         return
 
@@ -809,7 +809,7 @@ class GoogleDriveHelper:
             self.path.append(Telegraph(access_token=telegraph_token).create_page(
                                                     title = 'Gawr Mirror Search',
                                                     author_name='Gawr Mirror',
-                                                    author_url='https://gawr.floral.workers.dev',
+                                                    author_url='https://t.me/gawrmirror',
                                                     html_content=content
                                                     )['path'])
 
