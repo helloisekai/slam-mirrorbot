@@ -560,7 +560,7 @@ section span{
 """
 
 
-@routes.get('/slam/files/{hash_id}')
+@routes.get('/gawrmirrorbot/files/{hash_id}')
 async def list_torrent_contents(request):
 
     torr = request.match_info["hash_id"]
@@ -568,7 +568,7 @@ async def list_torrent_contents(request):
     gets = request.query
 
     if "pin_code" not in gets.keys():
-        rend_page = code_page.replace("{form_url}", f"/slam/files/{torr}")
+        rend_page = code_page.replace("{form_url}", f"/gawrmirrorbot/files/{torr}")
         return web.Response(text=rend_page, content_type='text/html')
 
     client = qba.Client(host="localhost", port="8090",
@@ -599,7 +599,7 @@ async def list_torrent_contents(request):
 
     rend_page = page.replace("{My_content}", cont[0])
     rend_page = rend_page.replace(
-        "{form_url}", f"/slam/files/{torr}?pin_code={pincode}")
+        "{form_url}", f"/gawrmirrorbot/files/{torr}?pin_code={pincode}")
     client.auth_log_out()
     return web.Response(text=rend_page, content_type='text/html')
 
@@ -654,7 +654,7 @@ async def re_verfiy(paused, resumed, client, torr):
     return True
 
 
-@routes.post('/slam/files/{hash_id}')
+@routes.post('/gawrmirrorbot/files/{hash_id}')
 async def set_priority(request):
 
     torr = request.match_info["hash_id"]
