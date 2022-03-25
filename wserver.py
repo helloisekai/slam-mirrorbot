@@ -206,7 +206,7 @@ input[type="submit"]:hover, input[type="submit"]:focus{
           alt="logo"
         />
         <a href="https://t.me/gawrmirror000bot"> 
-          <h2 class="name">Gawr Mirror z Bot</h2>
+          <h2 class="name">Gawr Bot</h2>
         </a>
       </div>
       <div class="social">
