@@ -560,8 +560,7 @@ section span{
 """
 
 
-@routes.get('/
-            files/{hash_id}')
+@routes.get('/slam/files/{hash_id}')
 async def list_torrent_contents(request):
 
     torr = request.match_info["hash_id"]
